@@ -1,13 +1,22 @@
 
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
+
 
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContain}>
-        <Image source={require('../assets/img/imgFlowers1.png')} style={styles.headerImage}/>
+        <ImageBackground source={require('../assets/img/imgFlowers1.png')} style={styles.headerImage}>
+          <View>
+            <TouchableOpacity>
+              <Image source={require('../assets/img/Vector1.png')}></Image>
+              <Image source={require('../assets/img/iconShare.png')}/>
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
       </View>
+
       <View style={styles.textContain}>
 
       </View>
@@ -28,9 +37,11 @@ const styles = StyleSheet.create({
   },
   headerImage: {
     flex:1,
-    width: '100%'
+    width: '100%',
+
   },
   textContain: {
     flex: 2,
+
   }
 });
